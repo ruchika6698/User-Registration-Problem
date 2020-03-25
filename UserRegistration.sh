@@ -18,9 +18,9 @@ function firstname()
 	fname1="^[A-Z][a-zA-Z]{3,15}$"
 	if [[ $FirstName =~ $fname1 ]]
 	then
-		echo "First Name is Valid";
+		printf "First Name is Valid \n";
 	else
-		echo "First Name is Invalid";
+		printf "First Name is Invalid \n";
 	fi
 }
 
@@ -29,9 +29,9 @@ function lastname()
 	lname1="^[A-Z][a-zA-Z]{3,15}$"
 	if [[ $LastName =~ $lname1 ]]
 	then
-		echo "Last Name is Valid";
+		printf "Last Name is Valid \n";
 	else
-		echo "Last Name is Invalid";
+		printf "Last Name is Invalid \n";
 	fi
 }
 
@@ -40,9 +40,9 @@ function emailId()
 	email="^([0-9a-zA-Z]+)([_+-.][0-9a-zA-Z])?[@][0-9a-zA-Z]+([.][a-z]{2,4})([.][a-z]{2})?$"
 	if [[ $EmailAddress =~ $email ]]
 	then
-		echo "Email Address is Valid";
+		printf "Email Address is Valid \n";
 	else
-		echo "Email Address is Invalid";
+		printf "Email Address is Invalid \n";
 	fi
 }
 
@@ -51,9 +51,9 @@ function mobilenumber()
 	mobileNumber="^[0-9]{2}[ ][0-9]{10}$"
 	if [[ $MobileNumber =~ $mobileNumber ]]
 	then
-		echo "Your Mobile Number is Valid"
+		printf "Your Mobile Number is Valid \n"
 	else
-		echo "Your Mobile Number is Invalid"
+		printf "Your Mobile Number is Invalid \n"
 	fi
 }
 
@@ -62,9 +62,32 @@ function passwordRule1()
 	rule1="^[a-zA-Z]{8,15}$"
 	if [[ $Password =~ $rule1 ]]
 	then
-		echo "Your Password is Valid"
+		printf "Password enter Sucessfully \n"
 	else
-		echo "Your Password is not Valid"
+		printf "Your Password is not Valid \n"
 	fi
 }
-passwordRule1
+
+function passwordRule2()
+{
+	rule2="^[a-zA-Z]*[A-Z]+[a-zA-Z]*{8,}$"
+	if [[ $Password =~ $rule2 ]]
+	then
+		printf "Password enter Successfully \n"
+	else
+		printf "Your Password is not Valid \n"
+	fi
+}
+
+function passwordRule3()
+{
+	rule3="^[A-Z]{1,}[a-zA-Z]{8,}[0-9]$"
+   if [[ $Password =~ $rule3 ]]
+   then
+      printf "Password enter Successfully \n"
+   else
+      printf "Your Password is not Valid \n"
+   fi
+}
+
+passwordRule3
