@@ -62,9 +62,20 @@ function passwordRule1()
 	rule1="^[a-zA-Z]{8,15}$"
 	if [[ $Password =~ $rule1 ]]
 	then
-		echo "Your Password is Valid"
+		echo "Password enter Sucessfully "
 	else
 		echo "Your Password is not Valid"
 	fi
 }
-passwordRule1
+
+function passwordRule2()
+{
+	rule2="^[a-zA-Z]*[A-Z]+[a-zA-Z]*{8,}$"
+	if [[ $Password =~ $rule2 ]]
+	then
+		echo "Password enter Successfully "
+	else
+		echo "Your Password is not Valid "
+	fi
+}
+
