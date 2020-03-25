@@ -57,21 +57,10 @@ function mobilenumber()
 	fi
 }
 
-function passwordRule1()
+function password()
 {
-	rule1="^[a-zA-Z]{8,15}$"
-	if [[ $Password =~ $rule1 ]]
-	then
-		printf "Password enter Sucessfully \n"
-	else
-		printf "Your Password is not Valid \n"
-	fi
-}
-
-function passwordRule2()
-{
-	rule2="^[a-zA-Z]*[A-Z]+[a-zA-Z]*{8,}$"
-	if [[ $Password =~ $rule2 ]]
+	rule="^[a-zA-Z0-9]*[@#$&*_+-]{1}[a-zA-Z0-9]*$";
+	if [[ $Password =~ $rule ]]
 	then
 		printf "Password enter Successfully \n"
 	else
@@ -79,26 +68,8 @@ function passwordRule2()
 	fi
 }
 
-function passwordRule3()
-{
-	rule3="^[A-Z]{1,}[a-zA-Z]{8,}[0-9]$"
-   if [[ $Password =~ $rule3 ]]
-   then
-      printf "Password enter Successfully \n"
-   else
-      printf "Your Password is not Valid \n"
-   fi
-}
-
-function passwordRule4()
-{
-   rule4="^[a-zA-Z0-9]*[@#$&*_+-]{1}[a-zA-Z0-9]*$";
-   if [[ $Password =~ $rule4 ]]
-   then
-      printf "Password enter Successfully \n"
-   else
-      printf "Your Password is not Valid \n"
-   fi
-}
-
-passwordRule4
+firstname
+lastname
+emailId
+mobilenumber
+password
