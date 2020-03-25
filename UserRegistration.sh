@@ -90,4 +90,3 @@ function passwordRule3()
    fi
 }
 
-passwordRule3
