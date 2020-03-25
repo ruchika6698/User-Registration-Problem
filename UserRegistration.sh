@@ -90,3 +90,15 @@ function passwordRule3()
    fi
 }
 
+function passwordRule4()
+{
+   rule4="^[a-zA-Z0-9]*[@#$&*_+-]{1}[a-zA-Z0-9]*$";
+   if [[ $Password =~ $rule4 ]]
+   then
+      printf "Password enter Successfully \n"
+   else
+      printf "Your Password is not Valid \n"
+   fi
+}
+
+passwordRule4
